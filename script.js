@@ -18,7 +18,7 @@ let card = async () => {
                 let photo = immagine[index];
                 let svgElement = document.querySelector(".card-img-top");
                 let imgElement = document.createElement("img");
-                imgElement.setAttribute("src", photo.src.large);
+                imgElement.setAttribute("src", photo.src.landscape);
                 imgElement.setAttribute("alt", photo.alt);
                 svgElement.replaceWith(imgElement);
                 let title = card.querySelector(".card-title");
@@ -51,8 +51,9 @@ let card2 = async () => {
                 let photo = immagine[index];
                 let svgElement = document.querySelector(".card-img-top");
                 let imgElement = document.createElement("img");
-                imgElement.setAttribute("src", photo.src.large);
+                imgElement.setAttribute("src", photo.src.landscape);
                 imgElement.setAttribute("alt", photo.alt);
+                imgElement.classList.add('img-fluid');
                 svgElement.replaceWith(imgElement);
                 let title = card.querySelector(".card-title");
                 title.innerHTML = photo.alt;
